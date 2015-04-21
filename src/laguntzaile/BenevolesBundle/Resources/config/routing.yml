@@ -1,0 +1,17 @@
+laguntzaile_benevoles_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: laguntzaileBenevolesBundle:Default:index }
+
+laguntzaile_benevoles_candidature:
+    path:     /candidature/{idEvenement}
+    defaults: { _controller: laguntzaileBenevolesBundle:Default:candidature }
+    requirements:
+        idEvenement:  \d+
+
+laguntzaile_benevoles_erreur:
+    path:     /erreur
+    defaults: { _controller: laguntzaileBenevolesBundle:Default:erreur}
+    
+laguntzaile_benevoles_affectation:
+    path:     /affectation/{idDisponibilite}
+    defaults: { _controller: laguntzaileBenevolesBundle:Default:affectation}

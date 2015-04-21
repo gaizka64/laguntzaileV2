@@ -1,0 +1,50 @@
+{% extends "::vueMere.html.twig" %}
+
+{% block contenuCentral %}
+                                
+        <h3>{{evenement.nom}}</h3>
+        <br />
+
+    
+        
+<p>{{personne.prenom}} {{personne.nom}},</p>
+        <br />
+
+        {% if tabAffectations|length == 0 %}
+            <p> Aucune propositions d'affectation pour l'instant.</p>
+        {% else %}
+            {% if tabAffectations|length == 1 %}
+                <p> Voici l'affectation qui vous est proposée :</p>
+            {% elseif tabAffectations|length > 1 %}
+                <p> Voici la liste des affectations qui vous sont proposées :</p>
+            {% endif %}
+     
+    <form method="post" {{form_enctype(formulaireAffectation) }}>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Poste</th>
+                    <th>Tour</th>
+                    <th>Choix</th>
+                  </tr>
+                    {% for affectation in tabAffectations %}
+                     <tr>
+                            <td>{{affectation.idTour.idPoste.nom}}</td>
+                            <td>De {{affectation.idTour.debut|date("m/d/Y H:i") }} à {{affectation.idTour.fin|date("m/d/Y H:i")}}</td>
+                            <td>
+                                {{ form_widget(formulaireAffectation.tabAffectations.statut) }}
+                            </td>
+                    </tr>
+                    {% endfor %}
+                </thead>
+                <tbody>
+                   
+               </tbody>
+            </table>
+
+
+                       <input type="submit" class="btn btn-primary" value="Envoyer !"/> 
+                     </span> 
+         </form>
+        {% endif %}
+{% endblock %}

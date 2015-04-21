@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_pgsql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: laguntzaile
+    database_user: oparihack
+    database_password: oparihack
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: c73f6e1c0f58cc478f9b228442e1be018805769d

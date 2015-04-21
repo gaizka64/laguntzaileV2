@@ -1,0 +1,21 @@
+.pourBougerBouton
+{
+ float : right;   
+}
+
+.centrer
+{
+ text-align: center;
+}
+.largeurMax
+{
+ width=100%;   
+}
+.gauche
+{
+ float: left;   
+}
+.droite
+{
+ float: right;   
+}
