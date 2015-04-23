@@ -3,12 +3,12 @@
 namespace laguntzaile\BenevolesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Disponibilite
  *
  * @ORM\Table(name="disponibilite", indexes={@ORM\Index(name="disponibilite_date_inscription_idx", columns={"date_inscription"}), @ORM\Index(name="disponibilite_statut_idx", columns={"statut"}), @ORM\Index(name="IDX_2CBACE2F5F15257A", columns={"id_personne"}), @ORM\Index(name="IDX_2CBACE2F8B13D439", columns={"id_evenement"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="DisponibiliteRepository")
  */
 class Disponibilite
 {

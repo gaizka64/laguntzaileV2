@@ -42,4 +42,6 @@ class AffectationType extends AbstractType
     {
         return 'laguntzaile_benevolesbundle_affectation';
     }
+    
+    
 }

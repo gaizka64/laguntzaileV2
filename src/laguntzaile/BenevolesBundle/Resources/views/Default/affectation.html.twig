@@ -1,13 +1,13 @@
 {% extends "::vueMere.html.twig" %}
 
 {% block contenuCentral %}
-                                
-        <h3>{{evenement.nom}}</h3>
+        <h3>{{(personneEtEvenement[0].idEvenement.nom)}}</h3>
         <br />
 
-    
+{{ dump(formulaireAffectation) }}
+{{ dump(formulaireAffectation.Affectation) }}
         
-<p>{{personne.prenom}} {{personne.nom}},</p>
+<p>{{(personneEtEvenement[0].idPersonne.prenom)}} {{(personneEtEvenement[0].idPersonne.nom)}},</p>
         <br />
 
         {% if tabAffectations|length == 0 %}
@@ -32,7 +32,7 @@
                             <td>{{affectation.idTour.idPoste.nom}}</td>
                             <td>De {{affectation.idTour.debut|date("m/d/Y H:i") }} à {{affectation.idTour.fin|date("m/d/Y H:i")}}</td>
                             <td>
-                                {{ form_widget(formulaireAffectation.tabAffectations.statut) }}
+                                {{ form_widget(formulaireAffectation.Affectation) }}
                             </td>
                     </tr>
                     {% endfor %}

@@ -7,21 +7,20 @@
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
         <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
         
-        
         {% endblock %}
     </head>
     <body>
         <div class="container">
             <!-- Ligne 1 --> 
-            <div class="row">
-                <div class="col-xs-12" style="background: #089635; z-index: 1">
-                    {% block header %}
-                    <center>
-                        <img class="displayed" src="{{ asset('images/bandeau.png') }}"/>
-                    </center>
-                    {% endblock %}
-                </div>
-            </div>    
+{#             <div class="row"> #}
+{#                 <div class="col-xs-12" style="background: #089635; z-index: 1"> #}
+{#                     {% block header %}#}
+{#                     <center>#}
+{#                         <img class="displayed" src="{{ asset('images/bandeau.png') }}"/>#}
+{#                     </center> #}
+{#                    {% endblock %}#}
+{#                 </div> #}
+{#            </div> #}    
         </div>
         
         <div id="corp" class="container">

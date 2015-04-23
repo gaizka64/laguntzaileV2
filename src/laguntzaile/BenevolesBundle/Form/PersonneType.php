@@ -33,15 +33,15 @@ class PersonneType extends AbstractType
             
             ->add('adresse','textarea',array(
                 'label' => 'Adresse Postale',
-                'attr' => array('cols' => '37', 'rows' => '2')))
+                'attr' => array('cols' => '21', 'rows' => '2')))
             
             ->add('codePostal','text',array(
                 'label' => 'Code postal',
-                'attr' => array('size' => '10')))
+                'attr' => array('size' => '7')))
             
             ->add('ville','text', array(
                 'label' => 'Commune',
-                'attr' => array('size' => '20')))
+                'attr' => array('size' => '10')))
             
             ->add('portable','text',array(
                 'label' => 'N° de portable'))
@@ -55,8 +55,17 @@ class PersonneType extends AbstractType
                 'label' => 'Compétences'))
             
             ->add('langues','text',array(
-                'label' => 'Langues parlées'))
-            
+                'label' => 'Langues parlées',
+                 'attr' => array(
+                    'placeholder' => 'ex : français,basque,...')))
+                  
+            ->add('commentaire','textarea',array(
+                'label' => 'Commentaire',
+                'attr' => array(
+                        'placeholder' => 'Informations que vous souhaitez communiquer',
+                        'rows' => '2',
+                        'cols' => '19')))   
+        
             
         ;
     }

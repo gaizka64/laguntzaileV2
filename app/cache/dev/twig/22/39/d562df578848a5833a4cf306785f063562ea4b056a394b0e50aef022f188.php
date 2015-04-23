@@ -12,7 +12,6 @@ class __TwigTemplate_2239d562df578848a5833a4cf306785f063562ea4b056a394b0e50aef02
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
-            'header' => array($this, 'block_header'),
             'central' => array($this, 'block_central'),
             'contenuCentral' => array($this, 'block_contenuCentral'),
             'footer' => array($this, 'block_footer'),
@@ -33,19 +32,14 @@ class __TwigTemplate_2239d562df578848a5833a4cf306785f063562ea4b056a394b0e50aef02
         ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 12
+        // line 11
         echo "    </head>
     <body>
         <div class=\"container\">
             <!-- Ligne 1 --> 
-            <div class=\"row\">
-                <div class=\"col-xs-12\" style=\"background: #089635; z-index: 1\">
-                    ";
-        // line 18
-        $this->displayBlock('header', $context, $blocks);
+";
         // line 23
-        echo "                </div>
-            </div>    
+        echo "    
         </div>
         
         <div id=\"corp\" class=\"container\">
@@ -53,9 +47,9 @@ class __TwigTemplate_2239d562df578848a5833a4cf306785f063562ea4b056a394b0e50aef02
             <div class=\"row\">
                 <div class=\"col-md-2\"></div>
                 ";
-        // line 31
+        // line 30
         $this->displayBlock('central', $context, $blocks);
-        // line 37
+        // line 36
         echo "            </div>
         </div>
     
@@ -64,23 +58,23 @@ class __TwigTemplate_2239d562df578848a5833a4cf306785f063562ea4b056a394b0e50aef02
             <div class=\"row\">
                 <div class=\"col-lg-12\">
                     ";
-        // line 44
+        // line 43
         $this->displayBlock('footer', $context, $blocks);
-        // line 46
+        // line 45
         echo "                </div>
             </div>
         </div>
 
         <script type=\"text/javascript\" src=\"";
-        // line 50
+        // line 49
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
         <script type=\"text/javascript\" src=\"";
-        // line 51
+        // line 50
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery-dropdown.js"), "html", null, true);
         echo "\" ></script>
         <script type=\"text/javascript\" src=\"";
-        // line 52
+        // line 51
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.js"), "html", null, true);
         echo "\"></script>
     </body>
@@ -107,48 +101,34 @@ class __TwigTemplate_2239d562df578848a5833a4cf306785f063562ea4b056a394b0e50aef02
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/style.css"), "html", null, true);
         echo "\" type=\"text/css\" />
         
-        
         ";
     }
 
-    // line 18
-    public function block_header($context, array $blocks = array())
-    {
-        // line 19
-        echo "                    <center>
-                        <img class=\"displayed\" src=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("images/bandeau.png"), "html", null, true);
-        echo "\"/>
-                    </center>
-                    ";
-    }
-
-    // line 31
+    // line 30
     public function block_central($context, array $blocks = array())
     {
-        // line 32
+        // line 31
         echo "                <div id=\"section\" class=\"col-md-8\">
                     ";
-        // line 33
+        // line 32
         $this->displayBlock('contenuCentral', $context, $blocks);
-        // line 34
+        // line 33
         echo "     
                 </div>
                 ";
     }
 
-    // line 33
+    // line 32
     public function block_contenuCentral($context, array $blocks = array())
     {
-        // line 34
+        // line 33
         echo "                    ";
     }
 
-    // line 44
+    // line 43
     public function block_footer($context, array $blocks = array())
     {
-        // line 45
+        // line 44
         echo "                    ";
     }
 
@@ -164,6 +144,6 @@ class __TwigTemplate_2239d562df578848a5833a4cf306785f063562ea4b056a394b0e50aef02
 
     public function getDebugInfo()
     {
-        return array (  152 => 45,  149 => 44,  145 => 34,  142 => 33,  136 => 34,  134 => 33,  131 => 32,  128 => 31,  121 => 20,  118 => 19,  115 => 18,  107 => 8,  102 => 7,  99 => 6,  94 => 5,  84 => 52,  80 => 51,  76 => 50,  70 => 46,  68 => 44,  59 => 37,  57 => 31,  47 => 23,  45 => 18,  37 => 12,  35 => 6,  31 => 5,  25 => 1,);
+        return array (  132 => 44,  129 => 43,  125 => 33,  122 => 32,  116 => 33,  114 => 32,  111 => 31,  108 => 30,  101 => 8,  96 => 7,  93 => 6,  88 => 5,  78 => 51,  74 => 50,  70 => 49,  64 => 45,  62 => 43,  53 => 36,  51 => 30,  42 => 23,  36 => 11,  34 => 6,  30 => 5,  24 => 1,);
     }
 }

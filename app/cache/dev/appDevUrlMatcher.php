@@ -127,14 +127,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // laguntzaile_benevoles_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'laguntzaile_benevoles_homepage')), array (  '_controller' => 'laguntzaile\\BenevolesBundle\\Controller\\DefaultController::indexAction',));
-        }
-
         // laguntzaile_benevoles_candidature
-        if (0 === strpos($pathinfo, '/candidature') && preg_match('#^/candidature/(?P<idEvenement>\\d+)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'laguntzaile_benevoles_candidature')), array (  '_controller' => 'laguntzaile\\BenevolesBundle\\Controller\\DefaultController::candidatureAction',));
+        if (0 === strpos($pathinfo, '/candidature') && preg_match('#^/candidature/(?P<idEvenement>\\d+)(?:/(?P<idPersonne>\\d+))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'laguntzaile_benevoles_candidature')), array (  '_controller' => 'laguntzaile\\BenevolesBundle\\Controller\\DefaultController::candidatureAction',  'idPersonne' => 0,));
         }
 
         // laguntzaile_benevoles_erreur
@@ -144,7 +139,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/a')) {
             // laguntzaile_benevoles_affectation
-            if (0 === strpos($pathinfo, '/affectation') && preg_match('#^/affectation/(?P<idDisponibilite>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/affectation') && preg_match('#^/affectation/(?P<idDisponibilite>\\d+)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'laguntzaile_benevoles_affectation')), array (  '_controller' => 'laguntzaile\\BenevolesBundle\\Controller\\DefaultController::affectationAction',));
             }
 

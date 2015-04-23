@@ -5,6 +5,7 @@ namespace laguntzaile\BenevolesBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use laguntzaile\BenevolesBundle\Entity\Personne	;
 use laguntzaile\BenevolesBundle\Entity\Affectation	;
+use laguntzaile\BenevolesBundle\Entity\AffectationRepository;
 use laguntzaile\BenevolesBundle\Entity\Disponibilite ;
 use laguntzaile\BenevolesBundle\Form\PersonneType ;
 use laguntzaile\BenevolesBundle\Form\DisponibiliteType ;
@@ -29,7 +30,7 @@ class DefaultController extends Controller
     
     
         
-    public function candidatureAction($idEvenement,Request $requeteUtilisateur)
+    public function candidatureAction($idEvenement,$idPersonne,Request $requeteUtilisateur)
     {
         $enregistrementEffectue = FALSE; // Au départ, l'enregistrement en BD n'est pas fait
         
@@ -42,10 +43,17 @@ class DefaultController extends Controller
     {
         return $this->render('laguntzaileBenevolesBundle:Default:erreur.html.twig');
     }
-	
+        
+    $disponibilite = new Disponibilite();
+	if ($idPersonne != 0)
+    {
+        $repositoryPersonne = $gestionnaireEntite->getRepository('laguntzaileBenevolesBundle:Personne');
+        $personne = $repositoryPersonne->find($idPersonne);
+        if ($personne != null)   
+            $disponibilite->setIdPersonne($personne);
+    }
+        
     // Création du formulaire
-	$disponibilite = new Disponibilite();
-	
 	$formulaireInscription = $this->createForm(new DisponibiliteType(), $disponibilite);
     
 	
@@ -90,49 +98,39 @@ class DefaultController extends Controller
     
     public function affectationAction($idDisponibilite,Request $requeteUtilisateur)
     {
-        // On vérifie si l'id affectation en question existe dans la base de données
-        $gestionnaireEntite = $this->getDoctrine()->getManager();
-        $repositoryAffectation = $gestionnaireEntite->getRepository('laguntzaileBenevolesBundle:Affectation');
-        $repositoryDisponibilite = $gestionnaireEntite->getRepository('laguntzaileBenevolesBundle:Disponibilite');
+        // On vérifie si l'id affectation passée en paramètre existe
+            $gestionnaireEntite = $this->getDoctrine()->getManager();
+            $repositoryAffectation = $gestionnaireEntite->getRepository('laguntzaileBenevolesBundle:Affectation');
+            $repositoryDisponibilite = $gestionnaireEntite->getRepository('laguntzaileBenevolesBundle:Disponibilite');
         
-        $disponibiliteCourante = $repositoryDisponibilite->find($idDisponibilite);
+            $tabAffectations=$repositoryAffectation->getTabAffectations($idDisponibilite);
         
-        // On Récupère la liste des Affectations qui sont proposées
-        $tabAffectations = $repositoryAffectation->findBy(array("idDisponibilite" => $idDisponibilite, "statut" => "proposee"));
+            if ($tabAffectations == NULL)
+                {
+                    return $this->render('laguntzaileBenevolesBundle:Default:erreur.html.twig');
+                }
         
-        
-        
-        
-        
-        /*if($tabAffectations == NULL)
-        {
-            return $this->render('laguntzaileBenevolesBundle:Default:erreur.html.twig');
-        }*/
-        
-        // On se base sur l'identifiant de la disponibilité
-        $personne=$disponibiliteCourante->getIdPersonne();
-        $evenement=$disponibiliteCourante->getIdEvenement();
+        // On récupère les Affectations liées à cette disponibilité
+            
+        $personneEtEvenement = $repositoryDisponibilite->getEvenementPersonne($idDisponibilite);
         
         // On va créer le formulaire
-        $formulaireAffectation = $this->createFormBuilder($tabAffectations)
-            ->add('tabAffectations', 'collection', array('type' => new AffectationType()))
-            ->getForm();
+
+        /*$formulaireAffectation = $this->createFormBuilder($tabAffectations)
+            ->add('Affectation', 'collection', array('type' => new AffectationType()))
+            ->getForm();*/
         
         $formulaireAffectation->handleRequest($requeteUtilisateur);
         
-        
-   
 	if ($formulaireAffectation->isValid())
     {
-        
         $gestionnaireEntite = $this->getDoctrine()->getManager();
 		$gestionnaireEntite->persist($disponibiliteCourante);
 		$gestionnaireEntite->flush();
     }
         return $this->render('laguntzaileBenevolesBundle:Default:affectation.html.twig',array(
             'tabAffectations'=> $tabAffectations,
-            'personne'=> $personne,
-            'evenement' => $evenement,
+            'personneEtEvenement'=> $personneEtEvenement,
             'formulaireAffectation'=> $formulaireAffectation->createView()));
     }
 }

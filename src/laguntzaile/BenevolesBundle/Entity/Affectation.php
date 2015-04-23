@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Affectation
  *
  * @ORM\Table(name="affectation", indexes={@ORM\Index(name="affectation_statut_idx", columns={"statut"}), @ORM\Index(name="IDX_F4DD61D392921F4A", columns={"id_disponibilite"}), @ORM\Index(name="IDX_F4DD61D3E1F1E56B", columns={"id_tour"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AffectationRepository")
  */
 class Affectation
 {

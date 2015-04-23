@@ -45,474 +45,348 @@ class __TwigTemplate_bbbd11bb70c44e0b3c5c77844580dc7396dd78913f418426a7bda0edbff
     {
         // line 4
         echo "    <div class=\"panel panel-default\">
-        <div class=\"panel-heading\"><h3 class=\"centrer\">Candidature pour l'événement ";
+            <h4 class=\"centrer\">Candidature pour l'événement ";
         // line 5
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["evenement"]) ? $context["evenement"] : $this->getContext($context, "evenement")), "nom", array()), "html", null, true);
-        echo "</h3></div>
-    
-    <div class=\"well\">
+        echo "</h4>
+        
+        
+
+            
         <form method=\"post\" ";
-        // line 8
+        // line 10
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), 'enctype');
         echo ">
+            
+        <div id=\"colone1\" class=\"col-md-7\">
+            
             <table class=\"table\">
                 <thead>
                   <tr>
-                    <th class=\"centrer\" colspan=\"2\">Coordonnées</th>
-                    
-                    <th class=\"centrer\" colspan=\"2\">Candidature</th>
-                    
+                      <th class=\"centrer\" colspan=\"2\"><h4><br/>A propos de vous <br/></h4></th>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                      <td>
                         ";
-        // line 20
-        echo "                        <tr>
-                            <td>
-                                ";
-        // line 22
+        // line 23
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "nom", array()), 'label');
-        echo "
-                                <br />
-                                (requis)
-                            </td>
-                            
-                            
-                            
-                            <td width=2%>
-                                ";
-        // line 30
+        echo " (requis)
+                        <br />
+                        ";
+        // line 25
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "nom", array()), 'errors');
         echo "
-                                ";
-        // line 31
+                        ";
+        // line 26
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "nom", array()), 'widget');
-        echo " 
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 37
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "joursEtHeuresDispo", array()), 'label');
         echo "
-                                (Jours et heures de vos disponibilités et indisponibilités) 
-                            </td>
-                            
-                            
-                            
-                            <td>
-                            ";
-        // line 44
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "joursEtHeuresDispo", array()), 'errors');
-        echo "
-                                ";
-        // line 45
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "joursEtHeuresDispo", array()), 'widget');
-        echo " 
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                ";
-        // line 51
+                      </td>
+                      <td> 
+                        ";
+        // line 29
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "prenom", array()), 'label');
-        echo "
-                                <br />
-                                (requis)
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 59
+        echo " (requis)
+                        <br />
+                        ";
+        // line 31
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "prenom", array()), 'errors');
         echo "
-                                ";
-        // line 60
+                        ";
+        // line 32
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "prenom", array()), 'widget');
-        echo " 
-                            </td>
-                            
-                            
-                            
-                            <td>
-                        ";
-        // line 66
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "listeAmis", array()), 'label');
         echo "
-                                <br />
-(Personnes avec qui vous souhaitez être ou ne pas être)
-                            </td>
+                      </td>
+                  </tr>
+                    <tr>
+                        <td class=\"centrer\" colspan=\"2\">
+                            <strong>Pour vous contacter</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             
-                            
-                            
-                            <td>
                             ";
-        // line 74
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "listeAmis", array()), 'errors');
-        echo "
-                                ";
-        // line 75
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "listeAmis", array()), 'widget');
-        echo "
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                ";
-        // line 81
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), 'label');
-        echo "
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                
-                                ";
-        // line 88
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), "day", array()), 'widget', array("attr" => array("size" => "2")));
-        echo "
-                                /
-                                ";
-        // line 90
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), "month", array()), 'widget', array("attr" => array("size" => "2")));
-        echo "
-                                /
-                                ";
-        // line 92
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), "year", array()), 'widget', array("attr" => array("size" => "4")));
-        echo "
-                                ";
-        // line 93
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), 'errors');
-        echo "
-                                
-                            </td>
-                            
-                            
-                            
-                            <td>
-                        ";
-        // line 100
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "typePoste", array()), 'label');
-        echo "
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 106
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "typePoste", array()), 'errors');
-        echo "
-                                ";
-        // line 107
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "typePoste", array()), 'widget');
-        echo "
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                ";
-        // line 113
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "email", array()), 'label');
-        echo "
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 119
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "email", array()), 'errors');
-        echo "
-                                ";
-        // line 120
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "email", array()), 'widget');
-        echo " 
-                            </td>
-                            
-                            
-                            
-                            <td>
-                         ";
-        // line 126
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "commentaire", array()), 'label');
-        echo "
-                            <br />
-                                (Pour nous aider à vous trouver un poste)
-                            </td>
-                            
-                            
-                            
-                            <td>
-                            ";
-        // line 134
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "commentaire", array()), 'errors');
-        echo "
-                                ";
-        // line 135
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "commentaire", array()), 'widget');
-        echo "
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td colspan=\"2\">
-                                ";
-        // line 141
+        // line 43
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "adresse", array()), 'label');
         echo "
-                                <br />
-                                ";
-        // line 143
+                            <br />
+                            ";
+        // line 45
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "adresse", array()), 'errors');
         echo "
-                                    ";
-        // line 144
+                            ";
+        // line 46
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "adresse", array()), 'widget');
         echo "
-                                <br />
-                                <span class=\"gauche\">
-                                Code Postal";
-        // line 148
-        echo "                            <br />
+                            <br />
+                            <span class=\"gauche\">
+                                <h6>Code Postal</h6>
                                 ";
-        // line 149
+        // line 50
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "codePostal", array()), 'errors');
         echo "
                                 ";
-        // line 150
+        // line 51
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "codePostal", array()), 'widget');
         echo " 
-                                </span>
-                                <span class=\"droite\">
-                                Commune";
-        // line 154
-        echo "                                <br />
+                                &nbsp &nbsp &nbsp
+                            </span>
+                                
+                            <h6>Commune</h6>
                                 ";
-        // line 155
+        // line 56
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "ville", array()), 'errors');
         echo "
                                 ";
-        // line 156
+        // line 57
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "ville", array()), 'widget');
         echo " 
-                                </span>
+                        </td>
+                        <td>
+                            ";
+        // line 60
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "email", array()), 'label');
+        echo "    
+                            <br />
+                           ";
+        // line 62
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "email", array()), 'widget');
+        echo "
+                           ";
+        // line 63
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "email", array()), 'errors');
+        echo "
+                            <br />
 
-                            </td>
-                            
-                            
-                            <td>
-                        
-                            </td>
-                            
-                            
-                            
-                            <td>
-                            
-                            </td>
-                        </tr>
-                        
-                        
-                        <tr>
-                            <td>
-                                ";
-        // line 176
+                           ";
+        // line 66
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "portable", array()), 'label');
         echo "
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 182
+                            <br />
+                           ";
+        // line 68
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "portable", array()), 'errors');
         echo "
-                                ";
-        // line 183
+                           ";
+        // line 69
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "portable", array()), 'widget');
-        echo " 
-                            </td>
-                            
-                            
-                            
-                            <td>
-                        
-                            </td>
-                            
-                            
-                            
-                            <td>
-                            
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                ";
-        // line 201
+        echo "
+                            <br />
+                            ";
+        // line 71
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "domicile", array()), 'label');
         echo "
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 207
+                      <br />
+                      ";
+        // line 73
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "domicile", array()), 'errors');
         echo "
-                                ";
-        // line 208
+                      ";
+        // line 74
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "domicile", array()), 'widget');
         echo " 
-                            </td>
                             
-                            
-                            
-                            <td>
-                        
-                            </td>
-                            
-                            
-                            
-                            <td>
-                            
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                ";
-        // line 226
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class=\"centrer\" colspan=\"2\"><strong>Pour en savoir plus sur vous</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ";
+        // line 83
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "profession", array()), 'label');
         echo "
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 232
+                            <br />
+                            ";
+        // line 85
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "profession", array()), 'errors');
         echo "
-                                ";
-        // line 233
+                            ";
+        // line 86
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "profession", array()), 'widget');
         echo " 
-                            </td>
-                            
-                            
-                            
-                            <td>
-                        
-                            </td>
-                            
-                            
-                            
-                            <td>
-                            
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                ";
-        // line 251
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "competences", array()), 'label');
+                        </td>
+                        <td>
+                            ";
+        // line 89
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), 'label');
         echo "
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 257
+                        <br />
+                        ";
+        // line 91
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), "day", array()), 'widget', array("attr" => array("size" => "2")));
+        echo "
+                        /
+                        ";
+        // line 93
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), "month", array()), 'widget', array("attr" => array("size" => "2")));
+        echo "
+                        /
+                        ";
+        // line 95
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), "year", array()), 'widget', array("attr" => array("size" => "4")));
+        echo "
+                        ";
+        // line 96
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "dateNaissance", array()), 'errors');
+        echo "
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ";
+        // line 101
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "competences", array()), 'label');
+        echo "    
+                            <br />
+                            ";
+        // line 103
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "competences", array()), 'errors');
         echo "
-                                ";
-        // line 258
+                            ";
+        // line 104
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "competences", array()), 'widget');
         echo " 
-                            </td>
-                            
-                            
-                            
-                            <td>
-                        
-                            </td>
-                            
-                            
-                            
-                            <td>
-                            
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                ";
-        // line 276
+                        </td>
+                        <td>
+                            ";
+        // line 107
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "langues", array()), 'label');
-        echo "
-                                <br />
-                                (ex : français,basque,...)
-                            </td>
-                            
-                            
-                            
-                            <td>
-                                ";
-        // line 284
+        echo " 
+                            <br />
+                            ";
+        // line 109
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "langues", array()), 'errors');
         echo "
-                                ";
-        // line 285
+                        ";
+        // line 110
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "langues", array()), 'widget');
         echo " 
-                            </td>
-                            
-                            
-                            
-                            <td>
-                        
-                            </td>
-                            
-                            
-                            
-                            <td>
-                            
-                            </td>
-                        </tr>            
+                        </td>
+                    </tr>
                     
-                        <tr>   
-                            <td>
-                                ";
-        // line 304
-        echo "                                ";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), 'rest');
+                    <tr>
+                        <td width=\"10%\">
+                            ";
+        // line 116
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "commentaire", array()), 'label');
         echo "
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td> <span class=\"pourBougerBouton\"> <input type=\"submit\" class=\"btn btn-primary\" value=\"Envoyer !\"/> </span> <td>
-                        </tr>
-                            
+                        </td>
+                        <td>
+                            ";
+        // line 119
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "commentaire", array()), 'errors');
+        echo "
+                            ";
+        // line 120
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "idPersonne", array()), "commentaire", array()), 'widget');
+        echo " 
+                        
+                        </td>
+
+                    </tr>
                 </tbody>
             </table>
-                
-\t   </form>
         </div>
+            
+
+        <div id=\"colone2\" class=\"col-md-3\">
+            <table class=\"table\">
+                <thead>
+                  <tr>
+                      <th class=\"centrer\"><h4>Spécifiquement <br /> pour cet événement</th></h4>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                        ";
+        // line 140
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "joursEtHeuresDispo", array()), 'label');
+        echo "
+                        <br />
+                        ";
+        // line 142
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "joursEtHeuresDispo", array()), 'errors');
+        echo "
+                        ";
+        // line 143
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "joursEtHeuresDispo", array()), 'widget');
+        echo "     
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                        ";
+        // line 148
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "listeAmis", array()), 'label');
+        echo "
+                        <br />
+                        ";
+        // line 150
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "listeAmis", array()), 'errors');
+        echo "
+                        ";
+        // line 151
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "listeAmis", array()), 'widget');
+        echo "    
+                      </td>   
+                  </tr>
+                    <tr>
+                        <td>
+                            ";
+        // line 156
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "typePoste", array()), 'label');
+        echo "
+                            <br /> 
+                            ";
+        // line 158
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "typePoste", array()), 'errors');
+        echo "
+                            ";
+        // line 159
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "typePoste", array()), 'widget');
+        echo "
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ";
+        // line 164
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "commentaire", array()), 'label');
+        echo "
+                            <br />
+                            ";
+        // line 166
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "commentaire", array()), 'errors');
+        echo "
+                            ";
+        // line 167
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), "commentaire", array()), 'widget');
+        echo " 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+               
+                            ";
+        // line 173
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formulaireInscription"]) ? $context["formulaireInscription"] : $this->getContext($context, "formulaireInscription")), 'rest');
+        echo "
+                            <span class=\"pourBougerBouton\">
+                                <input type=\"submit\" class=\"btn btn-primary\" value=\"Envoyer !\"/>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+   </div>
 </div>
+
 ";
     }
 
@@ -528,6 +402,6 @@ class __TwigTemplate_bbbd11bb70c44e0b3c5c77844580dc7396dd78913f418426a7bda0edbff
 
     public function getDebugInfo()
     {
-        return array (  501 => 304,  480 => 285,  476 => 284,  465 => 276,  444 => 258,  440 => 257,  431 => 251,  410 => 233,  406 => 232,  397 => 226,  376 => 208,  372 => 207,  363 => 201,  342 => 183,  338 => 182,  329 => 176,  306 => 156,  302 => 155,  299 => 154,  293 => 150,  289 => 149,  286 => 148,  280 => 144,  276 => 143,  271 => 141,  262 => 135,  258 => 134,  247 => 126,  238 => 120,  234 => 119,  225 => 113,  216 => 107,  212 => 106,  203 => 100,  193 => 93,  189 => 92,  184 => 90,  179 => 88,  169 => 81,  160 => 75,  156 => 74,  145 => 66,  136 => 60,  132 => 59,  121 => 51,  112 => 45,  108 => 44,  98 => 37,  89 => 31,  85 => 30,  74 => 22,  70 => 20,  56 => 8,  50 => 5,  47 => 4,  44 => 3,  37 => 2,  11 => 1,);
+        return array (  377 => 173,  368 => 167,  364 => 166,  359 => 164,  351 => 159,  347 => 158,  342 => 156,  334 => 151,  330 => 150,  325 => 148,  317 => 143,  313 => 142,  308 => 140,  285 => 120,  281 => 119,  275 => 116,  266 => 110,  262 => 109,  257 => 107,  251 => 104,  247 => 103,  242 => 101,  234 => 96,  230 => 95,  225 => 93,  220 => 91,  215 => 89,  209 => 86,  205 => 85,  200 => 83,  188 => 74,  184 => 73,  179 => 71,  174 => 69,  170 => 68,  165 => 66,  159 => 63,  155 => 62,  150 => 60,  144 => 57,  140 => 56,  132 => 51,  128 => 50,  121 => 46,  117 => 45,  112 => 43,  98 => 32,  94 => 31,  89 => 29,  83 => 26,  79 => 25,  74 => 23,  58 => 10,  50 => 5,  47 => 4,  44 => 3,  37 => 2,  11 => 1,);
     }
 }

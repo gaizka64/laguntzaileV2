@@ -36,20 +36,25 @@ class __TwigTemplate_89728f8399425dce7b08a512370d7d77bc97f723e9a8f7294651ddcafa2
     public function block_contenuCentral($context, array $blocks = array())
     {
         // line 4
-        echo "                                
-        <h3>";
-        // line 5
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["evenement"]) ? $context["evenement"] : $this->getContext($context, "evenement")), "nom", array()), "html", null, true);
+        echo "        <h3>";
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["personneEtEvenement"]) ? $context["personneEtEvenement"] : $this->getContext($context, "personneEtEvenement")), 0, array(), "array"), "idEvenement", array()), "nom", array()), "html", null, true);
         echo "</h3>
         <br />
 
-    
+";
+        // line 7
+        echo $this->env->getExtension('dump')->dump($this->env, $context, (isset($context["formulaireAffectation"]) ? $context["formulaireAffectation"] : $this->getContext($context, "formulaireAffectation")));
+        echo "
+";
+        // line 8
+        echo $this->env->getExtension('dump')->dump($this->env, $context, $this->getAttribute((isset($context["formulaireAffectation"]) ? $context["formulaireAffectation"] : $this->getContext($context, "formulaireAffectation")), "Affectation", array()));
+        echo "
         
 <p>";
         // line 10
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["personne"]) ? $context["personne"] : $this->getContext($context, "personne")), "prenom", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["personneEtEvenement"]) ? $context["personneEtEvenement"] : $this->getContext($context, "personneEtEvenement")), 0, array(), "array"), "idPersonne", array()), "prenom", array()), "html", null, true);
         echo " ";
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["personne"]) ? $context["personne"] : $this->getContext($context, "personne")), "nom", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["personneEtEvenement"]) ? $context["personneEtEvenement"] : $this->getContext($context, "personneEtEvenement")), 0, array(), "array"), "idPersonne", array()), "nom", array()), "html", null, true);
         echo ",</p>
         <br />
 
@@ -105,7 +110,7 @@ class __TwigTemplate_89728f8399425dce7b08a512370d7d77bc97f723e9a8f7294651ddcafa2
                             <td>
                                 ";
                 // line 35
-                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formulaireAffectation"]) ? $context["formulaireAffectation"] : $this->getContext($context, "formulaireAffectation")), "tabAffectations", array()), "statut", array()), 'widget');
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formulaireAffectation"]) ? $context["formulaireAffectation"] : $this->getContext($context, "formulaireAffectation")), "Affectation", array()), 'widget');
                 echo "
                             </td>
                     </tr>
@@ -141,6 +146,6 @@ class __TwigTemplate_89728f8399425dce7b08a512370d7d77bc97f723e9a8f7294651ddcafa2
 
     public function getDebugInfo()
     {
-        return array (  118 => 39,  108 => 35,  101 => 33,  97 => 32,  94 => 31,  90 => 30,  79 => 22,  76 => 21,  72 => 19,  70 => 18,  67 => 17,  64 => 16,  60 => 14,  58 => 13,  50 => 10,  42 => 5,  39 => 4,  36 => 3,  11 => 1,);
+        return array (  123 => 39,  113 => 35,  106 => 33,  102 => 32,  99 => 31,  95 => 30,  84 => 22,  81 => 21,  77 => 19,  75 => 18,  72 => 17,  69 => 16,  65 => 14,  63 => 13,  55 => 10,  50 => 8,  46 => 7,  39 => 4,  36 => 3,  11 => 1,);
     }
 }
